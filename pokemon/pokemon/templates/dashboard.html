@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Dashboard Pokémon</title>
+    </head>
+    <body>
+        <h1>Lista de los primeros 50 Pokémones</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Tipos</th>
+                    <th>Peso (kg)</th>
+                    <th>Altura (m)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pokemon in pokemones %}
+                    <tr>
+                        <td>{{ pokemon.id }}</td>
+                        <td>{{ pokemon.nombre }}</td>
+                        <td>{{ pokemon.tipos }}</td>
+                        <td>{{ pokemon.peso }}</td>
+                        <td>{{ pokemon.altura }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href = "../peso" class = "btn">Pokemon por peso</a>
+        <a href = "/pokemon/dashboard" class = "btn">Dashboard</a>
+    </body>
+</html>
+

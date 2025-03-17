@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Pokémon entre 30 y 80</title>
+    </head>
+    <body>
+        <h1>Lista de los Pokémones que pesen entre 30 y 80</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Tipos</th>
+                    <th>Peso (kg)</th>
+                    <th>Altura (m)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pesopokemon in pesopokemon %}
+                    <tr>
+                        <td>{{ pesopokemon.id }}</td>
+                        <td>{{ pesopokemon.nombre }}</td>
+                        <td>{{ pesopokemon.tipos }}</td>
+                        <td>{{ pesopokemon.peso }}</td>
+                        <td>{{ pesopokemon.altura }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href = "../dashboard" class= "btn">Dashboard</a>
+        
+    </body>
+</html>
